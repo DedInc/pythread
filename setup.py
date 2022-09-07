@@ -1,11 +1,11 @@
-import setuptools
+from setuptools import setup, find_packages
 
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
-setuptools.setup(
+setup(
     name="pythread",
-    version="1.0.5",
+    version="1.1.1",
     author="Maehdakvan",
     author_email="visitanimation@google.com",
     description="Useful module for comfortable managing with threading.",
@@ -20,6 +20,6 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    packages=["pythread"],
-    python_requires=">=3.0",
+    packages=find_packages(),
+    python_requires='>=3.0'
 )

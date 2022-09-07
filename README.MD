@@ -5,9 +5,15 @@
 <h1 align="center"> -How to use- </h1>
 
 ```python
-import pythread as ptr
+import pythread as pt
 
-ptr.createThread('NameOfThread', func, 5) #NameOfThread - name of thread, func - function, 5 - delay of run function
-ptr.stopThread('NameOfThread') #stop thread
+def func(a, b):
+    print(a, b)
+
+t = pt.createThread('NameOfThread', func, 5, 'a', 'b') #NameOfThread - name of thread, func - function, 5 - delay of run function, 'a', and 'b' arguments of function
+t.start() #start the thread
+
+pt.stopThread('NameOfThread') #stop thread by name
+pt.stopThread(t) #stop thread by thread
 t = ptr.getThreadByName('NameOfThread') #select thread by name
 ```
