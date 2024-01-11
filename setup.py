@@ -5,10 +5,10 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setup(
     name="pythread",
-    version="1.1.1",
+    version="1.5.0",
     author="Maehdakvan",
     author_email="visitanimation@google.com",
-    description="Useful module for comfortable managing with threading.",
+    description="A Python library providing a user-friendly interface for managing both synchronous and asynchronous threads.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/DedInc/pythread",
@@ -21,5 +21,6 @@ setup(
         "Operating System :: OS Independent",
     ],
     packages=find_packages(),
+    install_requires = ['asyncio'],
     python_requires='>=3.0'
 )
